@@ -1,0 +1,596 @@
+To design a database for the Zen Class Programme.
+
+Users Collection
+
+[
+  {
+    _id: 'user_1',
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+    date_joined: '2020-01-15'
+  },
+  {
+    _id: 'user_2',
+    name: 'Jane Smith',
+    email: 'jane.smith@example.com',
+    date_joined: '2020-02-01'
+  },
+  {
+    _id: 'user_3',
+    name: 'Alex Brown',
+    email: 'alex.brown@example.com',
+    date_joined: '2020-03-10'
+  },
+  {
+    _id: 'user_4',
+    name: 'Sarah White',
+    email: 'sarah.white@example.com',
+    date_joined: '2020-04-20'
+  },
+  {
+    _id: 'user_5',
+    name: 'Mike Green',
+    email: 'mike.green@example.com',
+    date_joined: '2020-05-05'
+  }
+]
+
+Codekata Collection
+
+[
+  {
+    _id: ObjectId('67359e6ccb08ac01888ec90e'),
+    user_id: 'user_1',
+    problem_id: 'C1',
+    solved_on: '2020-10-01'
+  },
+  {
+    _id: ObjectId('67359e6ccb08ac01888ec90f'),
+    user_id: 'user_1',
+    problem_id: 'C2',
+    solved_on: '2020-10-05'
+  },
+  {
+    _id: ObjectId('67359e6ccb08ac01888ec910'),
+    user_id: 'user_2',
+    problem_id: 'C3',
+    solved_on: '2020-10-03'
+  },
+  {
+    _id: ObjectId('67359e6ccb08ac01888ec911'),
+    user_id: 'user_3',
+    problem_id: 'C4',
+    solved_on: '2020-10-07'
+  },
+  {
+    _id: ObjectId('67359e6ccb08ac01888ec912'),
+    user_id: 'user_3',
+    problem_id: 'C5',
+    solved_on: '2020-10-08'
+  },
+  {
+    _id: ObjectId('67359e6ccb08ac01888ec913'),
+    user_id: 'user_5',
+    problem_id: 'C6',
+    solved_on: '2020-10-10'
+  }
+]
+
+Attendance Collection
+
+[
+  {
+    _id: 'attendance_1',
+    user_id: 'user_1',
+    date: '2020-10-05',
+    status: 'present',
+    company_drive_id: 'drive_1'
+  },
+  {
+    _id: 'attendance_2',
+    user_id: 'user_1',
+    date: '2020-10-10',
+    status: 'absent',
+    company_drive_id: 'drive_2'
+  },
+  {
+    _id: 'attendance_3',
+    user_id: 'user_2',
+    date: '2020-10-05',
+    status: 'present',
+    company_drive_id: 'drive_1'
+  },
+  {
+    _id: 'attendance_4',
+    user_id: 'user_2',
+    date: '2020-10-07',
+    status: 'absent',
+    company_drive_id: 'drive_2'
+  },
+  {
+    _id: 'attendance_5',
+    user_id: 'user_3',
+    date: '2020-10-10',
+    status: 'absent',
+    company_drive_id: 'drive_2'
+  },
+  {
+    _id: 'attendance_6',
+    user_id: 'user_3',
+    date: '2020-10-12',
+    status: 'present',
+    company_drive_id: 'drive_3'
+  },
+  {
+    _id: 'attendance_7',
+    user_id: 'user_4',
+    date: '2020-10-10',
+    status: 'absent',
+    company_drive_id: 'drive_2'
+  },
+  {
+    _id: 'attendance_8',
+    user_id: 'user_4',
+    date: '2020-10-15',
+    status: 'present',
+    company_drive_id: 'drive_3'
+  },
+  {
+    _id: 'attendance_9',
+    user_id: 'user_5',
+    date: '2020-10-15',
+    status: 'present',
+    company_drive_id: 'drive_3'
+  },
+  {
+    _id: 'attendance_10',
+    user_id: 'user_5',
+    date: '2020-10-20',
+    status: 'present',
+    company_drive_id: 'drive_1'
+  },
+  {
+    _id: 'attendance_11',
+    user_id: 'user_1',
+    date: '2020-10-18',
+    status: 'absent',
+    company_drive_id: 'drive_3'
+  },
+  {
+    _id: 'attendance_12',
+    user_id: 'user_3',
+    date: '2020-10-20',
+    status: 'absent',
+    company_drive_id: 'drive_3'
+  }
+]
+
+Topics Collection
+
+[
+  {
+    _id: 'topic_1',
+    name: 'Introduction to JavaScript',
+    date: '2020-09-30'
+  },
+  { 
+    _id: 'topic_2',
+    name: 'Data Structures',
+    date: '2020-11-05' },
+  { 
+    _id: 'topic_3',
+    name: 'Algorithms',
+    date: '2020-10-10' },
+  {
+    _id: 'topic_4',
+    name: 'Object-Oriented Programming',
+    date: '2020-10-12'
+  },
+  { 
+    _id: 'topic_5', 
+    name: 'Web Development',
+    date: '2020-10-15' }
+]
+
+Tasks Collection
+
+[
+  {
+    _id: ObjectId('67359ee2cb08ac01888ec914'),
+    user_id: 'user_1',
+    task_id: 'T1',
+    status: 'not submitted',
+    assigned_on: '2020-10-01'
+  },
+  {
+    _id: ObjectId('67359ee2cb08ac01888ec915'),
+    user_id: 'user_1',
+    task_id: 'T2',
+    status: 'submitted',
+    assigned_on: '2020-10-05'
+  },
+  {
+    _id: ObjectId('67359ee2cb08ac01888ec916'),
+    user_id: 'user_2',
+    task_id: 'T3',
+    status: 'not submitted',
+    assigned_on: '2020-10-02'
+  },
+  {
+    _id: ObjectId('67359ee2cb08ac01888ec917'),
+    user_id: 'user_3',
+    task_id: 'T4',
+    status: 'not submitted',
+    assigned_on: '2020-10-08'
+  },
+  {
+    _id: ObjectId('67359ee2cb08ac01888ec918'),
+    user_id: 'user_4',
+    task_id: 'T5',
+    status: 'not submitted',
+    assigned_on: '2020-10-10'
+  },
+  {
+    _id: ObjectId('67359ee2cb08ac01888ec919'),
+    user_id: 'user_5',
+    task_id: 'T6',
+    status: 'submitted',
+    assigned_on: '2020-10-05'
+  },
+  {
+    _id: ObjectId('67359ee2cb08ac01888ec920'),
+    user_id: 'user_1',
+    task_id: 'T7',
+    status: 'not submitted',
+    assigned_on: '2020-10-10'
+  },
+  {
+    _id: ObjectId('67359ee2cb08ac01888ec921'),
+    user_id: 'user_3',
+    task_id: 'T8',
+    status: 'not submitted',
+    assigned_on: '2020-10-12'
+  }
+]
+
+Company Drives Collection
+
+[
+  { 
+    _id: 'drive_1',
+    company_name: 'TechCorp',
+    date: '2020-10-05'
+  },
+  {
+    _id: 'drive_2',
+    company_name: 'Innovative Solutions',
+    date: '2020-10-10'
+  },
+  { 
+    _id: 'drive_3',
+    company_name: 'FutureTech',
+    date: '2020-10-15' 
+  }
+]
+
+Mentors Collection
+
+[
+  {
+    _id: 'mentor_1',
+    name: 'Rachel Adams',
+    email: 'rachel.adams@example.com',
+    mentees_count: 20
+  },
+  {
+    _id: 'mentor_2',
+    name: 'David Lee',
+    email: 'david.lee@example.com',
+    mentees_count: 18
+  },
+  {
+    _id: 'mentor_3',
+    name: 'Sophie Turner',
+    email: 'sophie.turner@example.com',
+    mentees_count: 12
+  }
+]
+
+Answers :-
+
+1. Find all the topics and tasks which are taught in the month of October.
+
+[
+  {
+    _id: 'topic_3',
+    name: 'Algorithms',
+    date: '2020-10-10',
+    tasks_in_october: []
+  },
+  {
+    _id: 'topic_4',
+    name: 'Object-Oriented Programming',
+    date: '2020-10-12',
+    tasks_in_october: []
+  },
+  {
+    _id: 'topic_5',
+    name: 'Web Development',
+    date: '2020-10-15',
+    tasks_in_october: []
+  }
+]
+
+Output :-
+
+[
+  {
+    _id: 'topic_3',
+    name: 'Algorithms',
+    date: '2020-10-10',
+    tasks_in_october: []
+  },
+  {
+    _id: 'topic_4',
+    name: 'Object-Oriented Programming',
+    date: '2020-10-12',
+    tasks_in_october: []
+  },
+  {
+    _id: 'topic_5',
+    name: 'Web Development',
+    date: '2020-10-15',
+    tasks_in_october: []
+  }
+]
+
+2. Find all the company drives which appeared between 15 Oct-2020 and 31 Oct-2020.
+
+db.company_drives.aggregate([
+  { 
+    $match: { 
+      "date": { 
+        $gte: "2020-10-15", 
+        $lte: "2020-10-31" 
+      }
+    }
+  }
+])
+
+Output :-
+
+[ 
+    { 
+        _id: 'drive_3',
+        company_name: 'FutureTech',
+        date: '2020-10-15'
+    } 
+]
+
+3. Find all the company drives and students who appeared for the placement.
+
+db.company_drives.aggregate([
+  { 
+    $lookup: {
+      from: "attendance", 
+      localField: "_id", 
+      foreignField: "company_drive_id", 
+      as: "students"
+    }
+  }
+])
+
+Output :-
+
+[
+  {
+    _id: 'drive_1',
+    company_name: 'TechCorp',
+    date: '2020-10-05',
+    students: [
+      {
+        _id: 'attendance_1',
+        user_id: 'user_1',
+        date: '2020-10-05',
+        status: 'present',
+        company_drive_id: 'drive_1'
+      },
+      {
+        _id: 'attendance_3',
+        user_id: 'user_2',
+        date: '2020-10-05',
+        status: 'present',
+        company_drive_id: 'drive_1'
+      },
+      {
+        _id: 'attendance_10',
+        user_id: 'user_5',
+        date: '2020-10-20',
+        status: 'present',
+        company_drive_id: 'drive_1'
+      }
+    ]
+  },
+  {
+    _id: 'drive_2',
+    company_name: 'Innovative Solutions',
+    date: '2020-10-10',
+    students: [
+      {
+        _id: 'attendance_2',
+        user_id: 'user_1',
+        date: '2020-10-10',
+        status: 'absent',
+        company_drive_id: 'drive_2'
+      },
+      {
+        _id: 'attendance_4',
+        user_id: 'user_2',
+        date: '2020-10-07',
+        status: 'absent',
+        company_drive_id: 'drive_2'
+      },
+      {
+        _id: 'attendance_5',
+        user_id: 'user_3',
+        date: '2020-10-10',
+        status: 'absent',
+        company_drive_id: 'drive_2'
+      },
+      {
+        _id: 'attendance_7',
+        user_id: 'user_4',
+        date: '2020-10-10',
+        status: 'absent',
+        company_drive_id: 'drive_2'
+      }
+    ]
+  },
+  {
+    _id: 'drive_3',
+    company_name: 'FutureTech',
+    date: '2020-10-15',
+    students: [
+      {
+        _id: 'attendance_6',
+        user_id: 'user_3',
+        date: '2020-10-12',
+        status: 'present',
+        company_drive_id: 'drive_3'
+      },
+      {
+        _id: 'attendance_8',
+        user_id: 'user_4',
+        date: '2020-10-15',
+        status: 'present',
+        company_drive_id: 'drive_3'
+      },
+      {
+        _id: 'attendance_9',
+        user_id: 'user_5',
+        date: '2020-10-15',
+        status: 'present',
+        company_drive_id: 'drive_3'
+      },
+      {
+        _id: 'attendance_11',
+        user_id: 'user_1',
+        date: '2020-10-18',
+        status: 'absent',
+        company_drive_id: 'drive_3'
+      },
+      {
+        _id: 'attendance_12',
+        user_id: 'user_3',
+        date: '2020-10-20',
+        status: 'absent',
+        company_drive_id: 'drive_3'
+      }
+    ]
+  }
+]
+
+4. Find the number of problems solved by the user in codekata.
+
+db.codekata.aggregate([
+  { 
+    $group: { 
+      _id: "$user_id", 
+      solved_problems: { $sum: 1 } 
+    }
+  }
+])
+
+Output :-
+
+[
+  { 
+    _id: 'user_3',
+    solved_problems: 2
+  },
+  { 
+    _id: 'user_1',
+    solved_problems: 2
+  },
+  { 
+    _id: 'user_2',
+    solved_problems: 1
+  },
+  { 
+    _id: 'user_5',
+    solved_problems: 1
+  }
+]
+
+5. Find all the mentors with who has the mentee's count more than 15.
+
+db.mentors.aggregate([
+  { 
+    $match: { 
+      "mentees_count": { $gt: 15 } 
+    }
+  }
+])
+
+Output :-
+
+[
+  {
+    _id: 'mentor_1',
+    name: 'Rachel Adams',
+    email: 'rachel.adams@example.com',
+    mentees_count: 20
+  },
+  {
+    _id: 'mentor_2',
+    name: 'David Lee',
+    email: 'david.lee@example.com',
+    mentees_count: 18
+  }
+]
+
+6. Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+db.attendance.aggregate([
+  {
+    $match: {
+      date: { $gte: "2020-10-15", $lte: "2020-10-31" },
+      status: "absent"
+    }
+  },
+  {
+    $lookup: {
+      from: "tasks",
+      localField: "user_id",
+      foreignField: "user_id",
+      as: "user_tasks"
+    }
+  },
+  {
+    $unwind: "$user_tasks"
+  },
+  {
+    $match: {
+      "user_tasks.status": "not submitted"
+    }
+  },
+  {
+    $group: {
+      _id: "$user_id",
+      count: { $sum: 1 }
+    }
+  }
+])
+
+Output :-
+
+[ 
+    { 
+        _id: 'user_3',
+         count: 2
+    }, 
+    { 
+        _id: 'user_1',
+        count: 2
+    } 
+]
